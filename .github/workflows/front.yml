@@ -41,10 +41,11 @@ jobs:
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
-
-      - name: Load kubeconfig
+        
+      - name: Configure kubeconfig
         run: |
-          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > $HOME/.kube/config
+          mkdir -p ~/.kube
+          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > ~/.kube/config
 
       - name: Update Instagram Deployment
         run: |
