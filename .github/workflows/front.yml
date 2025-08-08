@@ -32,7 +32,7 @@ jobs:
       - name: Build and Push Instagram Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./instagram
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
