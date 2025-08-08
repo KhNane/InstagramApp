@@ -46,8 +46,9 @@ jobs:
   
       - name: Configure kubeconfig
         run: |
-          mkdir -p ~/.kube
-          echo "${{ secrets.HEY }}" | base64 -d > ~/.kube/config
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.HEY }}" | base64 -d > $HOME/.kube/config
+
 
       - name: Update Instagram Deployment
         run: |
