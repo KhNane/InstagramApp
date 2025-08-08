@@ -47,8 +47,9 @@ jobs:
       - name: Configure kubeconfig
         run: |
           mkdir -p $HOME/.kube
-          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > $HOME/.kube/config
-
+          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > ~/.kube/config
+          ls -la ~/.kube
+          cat ~/.kube/config | head -10
 
 
       - name: Update Instagram Deployment
