@@ -32,6 +32,14 @@ jobs:
       - name: Build and Push Instagram Image
         uses: docker/build-push-action@v5
         with:
+          context: ./instgram
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+      - name: Build and Push Instagram Image
+        uses: docker/build-push-action@v5
+        with:
           context: ./instagram
           push: true
           tags: |
