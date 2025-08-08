@@ -51,10 +51,9 @@ jobs:
           ls -la ~/.kube
           cat ~/.kube/config | head -10
 
-
       - name: Update Instagram Deployment
         run: |
-          kubectl set image deployment/${{ env.DEPLOYMENT_NAME }} ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          kubectl --insecure-skip-tls-verify=true set image deployment/${{ env.DEPLOYMENT_NAME }} ${{ env.CONTAINER_NAME }}=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
   deploy-user-posts-comments:
     runs-on: ubuntu-latest
