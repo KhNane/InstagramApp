@@ -10,7 +10,7 @@ jobs:
 
     env:
       IMAGE_NAME: nanekhachatryan/instagram
-      DEPLOYMENT_NAME: instagram-deployment
+      DEPLOYMENT_NAME: my-node
       CONTAINER_NAME: node-container
 
     steps:
