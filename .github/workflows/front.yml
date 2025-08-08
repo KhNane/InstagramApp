@@ -41,7 +41,9 @@ jobs:
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
-#not working        
+        with:
+          version: 'latest'
+  
       - name: Configure kubeconfig
         run: |
           mkdir -p ~/.kube
