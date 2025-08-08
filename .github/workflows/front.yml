@@ -28,7 +28,7 @@ jobs:
 
       - name: Get Short SHA
         run: echo "IMAGE_TAG=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-#not working 
+ 
       - name: Build and Push Instagram Image
         uses: docker/build-push-action@v5
         with:
@@ -41,7 +41,7 @@ jobs:
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
-        
+#not working        
       - name: Configure kubeconfig
         run: |
           mkdir -p ~/.kube
