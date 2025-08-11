@@ -46,8 +46,6 @@ jobs:
         run: |
           kubectl set image deployment/node-app node-container=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           
-      - name: Install yq
-        run: sudo apt-get install -y yq
 
       - name: Update deployment YAML with new image tag
         run: |
