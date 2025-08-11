@@ -51,7 +51,7 @@ jobs:
         run: |
           yq -y -i '.spec.template.spec.containers[] |= 
             (if .name == "node-container" then .image = "nanekhachatryan/instagram:${{ env.IMAGE_TAG }}" else . end)' \
-            instagram-postgres-all/instagram/instagram_deployment.yaml
+            /home/k8s/instagram-postgres-all/instagram/instagram_deployment.yaml
 
       - name: Apply to Kubernetes
         run: kubectl apply -f instagram-postgres-all/instagram/instagram_deployment.yaml
