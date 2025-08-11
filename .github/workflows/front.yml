@@ -80,7 +80,7 @@ jobs:
       - name: Build and Push User-Posts-Comments Image
         uses: docker/build-push-action@v5
         with:
-          context: ./user-posts-comments
+          context: ./user_posts_comments
           push: true
           tags: |
             ${{ env.IMAGE_NAME }}:latest
