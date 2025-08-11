@@ -48,11 +48,12 @@ jobs:
       
       - name: Ensure k8s directory exists
         run: mkdir -p k8s
-
+      
       - name: Export updated deployment YAML
         run: |
           kubectl get deployment node-app -o yaml > k8s/instagram_deployment.yaml
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git commit -am "Update deployment.yaml with latest image"
+          git add k8s/instagram_deployment.yaml
+          git commit -m "Update deployment.yaml with latest image"
           git push
