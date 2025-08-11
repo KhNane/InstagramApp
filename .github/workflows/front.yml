@@ -49,11 +49,18 @@ jobs:
       - name: Ensure k8s directory exists
         run: mkdir -p k8s
       
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+      
+      - name: Authenticate with PAT
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git
+      
       - name: Export updated deployment YAML
         run: |
           kubectl get deployment node-app -o yaml > k8s/instagram_deployment.yaml
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
           git add k8s/instagram_deployment.yaml
           git commit -m "Update deployment.yaml with latest image"
           git push
