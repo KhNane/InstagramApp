@@ -54,12 +54,12 @@ jobs:
           kubectl --insecure-skip-tls-verify=true set image deployment/node-app node-container=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
 
   deploy-user-posts-comments:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted 
 
     env:
       IMAGE_NAME: nanekhachatryan/user-posts-comments
-      DEPLOYMENT_NAME: user-posts-comments-deployment
-      CONTAINER_NAME: node-container
+      DEPLOYMENT_NAME: user-posts-comments
+      CONTAINER_NAME: user-posts-comments
 
     steps:
       - name: Checkout code
