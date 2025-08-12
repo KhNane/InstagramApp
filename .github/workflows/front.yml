@@ -99,7 +99,7 @@ jobs:
         - name: Update deployment YAML with new image tag
           run: |
             yq -y -i '.spec.template.spec.containers[] |= 
-              (if .name == "user-posts-comments" then .image = "nanekhachatryan/user_posts_comments:${{ env.IMAGE_TAG }}" else . end)' \
+              (if .name == "user-posts-comments" then .image = "nanekhachatryan/user-posts-comments:${{ env.IMAGE_TAG }}" else . end)' \
               /home/k8s/app-deployment.yaml
   
         - name: Apply to Kubernetes
