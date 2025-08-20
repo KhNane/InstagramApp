@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - 'user_posts_comments/**'
-      - '.github/workflows/back.yml' 
+      - '.github/workflows/back.yaml' 
       
 jobs:
   deploy-user-posts-comments:
