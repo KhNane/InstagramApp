@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - front
+      
 jobs:
   deploy-instagram:
     runs-on: self-hosted 
