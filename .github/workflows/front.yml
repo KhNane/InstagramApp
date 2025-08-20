@@ -2,7 +2,7 @@ name: CI/CD to Instagram Front
 on:
   push:
     branches:
-      - main
+      - front
 jobs:
   deploy-instagram:
     runs-on: self-hosted 
