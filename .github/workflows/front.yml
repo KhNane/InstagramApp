@@ -2,7 +2,10 @@ name: CI/CD to Instagram Front
 on:
   push:
     branches:
-      - front
+      - main
+    paths:
+      - 'instagram/**'
+      - '.github/workflows/front.yml' 
 jobs:
 
   deploy-instagram:
