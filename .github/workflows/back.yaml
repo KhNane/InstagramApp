@@ -2,7 +2,10 @@ name: CI/CD to Instagram Back
 on:
   push:
     branches:
-      - back
+      - main
+    paths:
+      - 'user_posts_comments/**'
+      - '.github/workflows/back.yml' 
       
 jobs:
   deploy-user-posts-comments:
