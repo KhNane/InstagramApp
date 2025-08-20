@@ -4,14 +4,14 @@ on:
     branches:
       - front
 jobs:
+
   deploy-instagram:
     runs-on: self-hosted 
-
     env:
       IMAGE_NAME: nanekhachatryan/instagram
       DEPLOYMENT_NAME: instagram
       CONTAINER_NAME: instagram
-
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
