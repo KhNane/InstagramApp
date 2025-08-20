@@ -2,7 +2,7 @@ name: CI/CD to Instagram Back
 on:
   push:
     branches:
-      - main
+      - back
 jobs:
   deploy-user-posts-comments:
       runs-on: self-hosted 
