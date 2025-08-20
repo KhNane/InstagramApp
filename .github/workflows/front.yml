@@ -6,7 +6,6 @@ on:
 jobs:
   deploy-instagram:
     runs-on: self-hosted 
-
     env:
       IMAGE_NAME: nanekhachatryan/instagram
       DEPLOYMENT_NAME: instagram
