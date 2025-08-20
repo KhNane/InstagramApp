@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - back
+      
 jobs:
   deploy-user-posts-comments:
       runs-on: self-hosted 
