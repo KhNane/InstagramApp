@@ -42,7 +42,6 @@ jobs:
         with:
           version: 'latest'
           
-
       - name: Update deployment YAML with new image tag
         run: |
           yq -y -i '.spec.template.spec.containers[] |= 
