@@ -36,7 +36,6 @@ jobs:
           tags: |
             nanekhachatryan/instagram:latest
             nanekhachatryan/instagram:${{ env.IMAGE_TAG }}
-      
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
