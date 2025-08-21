@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - 'instgram/**'
+      - 'instgram/*'
       - '.github/workflows/front.yml' 
 jobs:
 
